@@ -3,9 +3,9 @@
 @section('content')
 <div class="container mx-auto px-4">
     {{-- Start For Popular Game Section --}}
-    <div class="popular-games">
-        <h2 class="text-blue-500 uppercase tracking-wide font-simibold">Popular Games</h2>
-        <div class="pupular-games text-sm grid grid-cols-6 gap-12 border-b border-gray-800 pb-16">
+    <div class="popular-games ">
+        <h2 class="text-blue-500 uppercase tracking-wide font-simibold ">Popular Games</h2>
+        <div class="pupular-games text-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-12 border-b border-gray-800 pb-16">
             @for ($i = 0; $i < 12; $i++)
                 <div class="game mt-8">
                     <div class="relative inline-block">
@@ -26,8 +26,8 @@
     </div>
     {{-- End of popular game section --}}
 
-    <div class="flex my-10">
-        <div class="recently-viewed w-3/4 mr-32">
+    <div class="flex flex-col lg:flex-row my-10">
+        <div class="recently-viewed w-full lg:w-3/4 lg:mr-32">
              <h2 class="text-blue-500 uppercase tracking-wide font-simibold">Recently Reviewed</h2>
              @for ($i = 0; $i < 3; $i++)
                 <div class="recently-reviewed-container space-y-12 mt-8">
@@ -45,7 +45,7 @@
                         <div class="ml-12">
                             <a href="#" class="font-simibold text-lg block mt-4 leading-tight hover:text-gray-400">Final Fantasy 7 Remark</a>
                             <div class="text-gray-400 mt-1">Playstatioun 4</div>
-                            <p class="mt-6 text-gray-400">
+                            <p class="mt-6 text-gray-400 hidden lg:block">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti ea odit rem amet aspernatur earum eveniet. Asperiores quo laboriosam, magnam vero praesentium at error modi. Sint cupiditate accusantium magni doloremque.
                             </p>
                         </div>
@@ -53,7 +53,7 @@
                 </div>
              @endfor
         </div>
-        <div class="most-anticipated w-1/4">
+        <div class="most-anticipated lg:w-1/4 mt-12 lg:mt-0">
              <h2 class="text-blue-500 uppercase tracking-wide font-simibold">Most Anticipated</h2>
              <div class="most-anticipated-container space-y-10 mt-8">
                 @for ($i = 0; $i < 4; $i++)
