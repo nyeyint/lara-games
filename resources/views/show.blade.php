@@ -3,12 +3,16 @@
 {{-- main content --}}
 @section('content')
 <div class="container mx-auto px-4">
-    <div class="game-details flex border-b border-gray-800 pb-12">
+    <div
+        class="game-details flex flex-col border-b border-gray-800 pb-12 lg:flex-row"
+    >
         <div class="flex-none">
             <img src="/ff7.jpg" alt="cover" />
         </div>
-        <div class="ml-12 mr-64">
-            <h2 class="font-simibold text-4xl">Final Fantasy VII Remake</h2>
+        <div class="mt-8 lg:mt-0 lg:ml-12 lg:mr-64">
+            <h2 class="font-simibold mt-1 text-4xl leading-tight">
+                Final Fantasy VII Remake
+            </h2>
             <div class="text-gray-400">
                 <span>Advanture, RPG</span>
                 &middot;
@@ -43,7 +47,7 @@
                         Score
                     </div>
                 </div>
-                <div class="ml-12 flex items-center space-x-4">
+                <div class="mt-4 flex items-center space-x-4 lg:ml-12 lg:mt-0">
                     <div
                         class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-800"
                     >
@@ -141,8 +145,10 @@
         <h2 class="font-simibold uppercase tracking-wide text-blue-500">
             Images
         </h2>
-        <div class="images mt-8 grid grid-cols-1 gap-12 lg:grid-cols-3">
-          @for ($i = 0; $i < 7; $i++)
+        <div
+            class="images mt-8 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3"
+        >
+            @for ($i = 0; $i < 7; $i++)
             <div>
                 <a href="#">
                     <img
@@ -152,7 +158,7 @@
                     />
                 </a>
             </div>
-           @endfor
+            @endfor
         </div>
     </div>
     {{-- end images container --}}
